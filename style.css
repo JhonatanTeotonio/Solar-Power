@@ -18,7 +18,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(#b85a31 50%, transparent ) ;
+    background: linear-gradient(#b85a31 40%, transparent ) ;
     display: flex;
     width: 100%;
     padding: 10px 100px;
@@ -27,6 +27,18 @@ header{
     z-index: 1000;
 }
 
+
+header::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #b85a31, transparent);
+    z-index: 1000;
+}
 
 header ul{
     display: flex;
@@ -45,11 +57,13 @@ header ul li a{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+    border-radius: 20px;
+    transition: 0.5s;
 }
 
 header ul li a:hover, header ul li a.active{
     background-color: #fff;
-    border-radius: 20px;
+    
     color: #bc643f;
 }
 
@@ -70,7 +84,7 @@ section{
     overflow: hidden;
 }
 
-section.home-sec::before{
+section::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -118,11 +132,20 @@ section img#sun{
     padding: 8px 30px;
     border-radius: 25px;
     font-weight: 700;
+    transition: 0.5s;
+}
+
+#btn:hover{
+    background: #803100;
+}
+
+#palmeiras, #front-mountains, #solar-power, #sun-reflection, #sun, header{
+    transition: 0.5s;
 }
 
 div#video-sec{
     position: relative;
-    padding: 100px ;
+    padding: 50px ;
     width: 100%;
     background: url(https://images.squarespace-cdn.com/content/v1/58b1faf01b631bccf54e27dc/1624255262561-T0T13SRD5A2XSOYMZTSD/ke17ZwdGBToddI8pDm48kJzIYz2n9kwHgOavrLg9BOx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oTuHdq7Rvx4Ug7r93ZeZdzgHaKRRuVck8adH9Z-dn0SLPUGwZ93nuE6G0138X04DQ/background.png);
     display: flex;
@@ -130,11 +153,34 @@ div#video-sec{
     align-items: center;
 }
 
+.title-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 div#video-sec h2{
-    color: #7f3000;
+    color: #876400;
     font-size: 3.0em;
     text-transform: uppercase;
     margin-bottom: 25px;
+}
+
+.content-sec{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.content-sec p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 50px;
+    color: #876400;
+    text-align: justify;
+    font-size: 1.1em;
 }
 
 .div-sun{
@@ -142,8 +188,23 @@ div#video-sec h2{
     margin-bottom: 25px;
 }
 
-.tour{
-    margin: 100px 0px 75px 0px;
+.image-tour{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-tour img{
+    width: 60%;
+}
+
+#video-sec h3{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #876400;
 }
 
 footer{
@@ -156,6 +217,7 @@ footer{
     align-items: center;
     box-shadow: #000000a1 10px 25px 10px 25px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 footer ul{
@@ -175,6 +237,5 @@ footer a{
 }
 
 footer a:hover{
-    color: beige;
-    text-decoration: underline;
+    color: rgb(255, 255, 241);
 }
