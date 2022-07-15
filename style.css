@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    /*tem que por o background ainda*/
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#b85a31 50%, transparent ) ;
+    display: flex;
+    width: 100%;
+    padding: 10px 100px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    margin-left: 75px;
+    list-style: none;
+}
+
+header ul li a{
+    color: #fff;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+header ul li a:hover, header ul li a.active{
+    background-color: #fff;
+    border-radius: 20px;
+    color: #bc643f;
+}
+
+#home-logo{
+    padding-top: 15px;
+    width: 150px;
+    filter: opacity(1) brightness(100); 
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section.home-sec::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #ffe393, transparent);
+    z-index: 1000;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#solar-power{
+    width: 100%;
+    object-fit: scale-down;
+    transform: scale(0.3);
+    filter: hue-rotate(323deg) brightness(0.5) contrast(282%);
+    
+}
+
+section img#front-mountains{
+    object-fit: fill;
+}
+
+section img#sun{
+    top: -200px;
+    mix-blend-mode: screen;
+}
+
+#btn{
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(105px);
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #b85a31;
+    padding: 8px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+div#video-sec{
+    position: relative;
+    padding: 100px ;
+    width: 100%;
+    background: url(https://images.squarespace-cdn.com/content/v1/58b1faf01b631bccf54e27dc/1624255262561-T0T13SRD5A2XSOYMZTSD/ke17ZwdGBToddI8pDm48kJzIYz2n9kwHgOavrLg9BOx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0oTuHdq7Rvx4Ug7r93ZeZdzgHaKRRuVck8adH9Z-dn0SLPUGwZ93nuE6G0138X04DQ/background.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#video-sec h2{
+    color: #7f3000;
+    font-size: 3.0em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.div-sun{
+    width: 200px;
+    margin-bottom: 25px;
+}
+
+.tour{
+    margin: 100px 0px 75px 0px;
+}
+
+footer{
+    position: relative;
+    background: #7f3000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #000000a1 10px 25px 10px 25px;
+    text-transform: uppercase;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+}
+
+footer ul li{
+    margin-left: 15px;
+}
+
+footer a{
+    text-decoration: none;
+    color: wheat;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+footer a:hover{
+    color: beige;
+    text-decoration: underline;
+}
